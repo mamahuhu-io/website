@@ -1,0 +1,235 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Mamahuhu — A serious open source organization',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: 'https://github.com/mamahuhu-io',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+      { text: 'Learn more', href: '#features' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'Mamahuhu Hero Image' }}
+  >
+    <Fragment slot="title">
+      <!-- Free template for <span class="hidden xl:inline">creating websites with</span>
+      <span class="text-accent dark:text-white highlight"> Astro 5.0</span> + Tailwind CSS -->
+      A serious open source organization
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Mamahuhu</span> is an open-source organization focused on fostering innovation and collaboration
+        through accessible, high-quality projects. Join us in empowering developers and driving tech evolution!
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What you get with Mamahuhu"
+    subtitle="Mamahuhu delivers free, open-source tools through community-driven innovation and global collaboration."
+    items={[
+      {
+        title: 'Open-Source by Design',
+        description:
+          'All Mamahuhu projects are fully open-source, allowing developers to access, modify, and distribute the code freely. Transparency and collaboration are at the heart of everything we do.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Community-Driven Development',
+        description:
+          "Mamahuhu thrives on community contributions. Whether you're a developer, designer, or enthusiast, you can actively participate in shaping the future of our projects.",
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Free Forever for Individuals',
+        description:
+          'We are committed to keeping Mamahuhu projects free for personal use and core functionalities. If paid plans are introduced in the future, they will only apply to advanced or enterprise features.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'High-Quality, Accessible Tools',
+        description:
+          'Our projects are built with a focus on quality, usability, and accessibility, ensuring they meet the needs of developers at all skill levels.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Continuous Innovation',
+        description:
+          'Mamahuhu is dedicated to pushing the boundaries of technology. We regularly update and improve our projects to stay at the forefront of innovation.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Global Collaboration',
+        description:
+          'With contributors and users from around the world, Mamahuhu fosters a diverse and inclusive community where ideas and knowledge are shared freely.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Most used widgets"
+    subtitle="Provides frequently used components for building websites using Tailwind CSS"
+    tagline="Projects"
+    items={[
+      {
+        title: 'Headers',
+        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Heros',
+        description:
+          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Features',
+        description:
+          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Content',
+        description:
+          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Call-to-Action',
+        description:
+          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Pricing',
+        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Testimonial',
+        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Contact',
+        description:
+          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Footers',
+        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Dive into the following questions to gain insights into the powerful features that Mamahuhu offers and how it can elevate your development journey."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What is Mamahuhu?',
+        description:
+          'Mamahuhu is an open-source organization dedicated to fostering innovation and collaboration in the tech community. We build and maintain high-quality, accessible projects to empower developers worldwide.',
+      },
+      {
+        title: 'How can I contribute to Mamahuhu?',
+        description:
+          'We welcome contributions from everyone! You can join us by submitting code, reporting issues, improving documentation, or sharing ideas. Check out our GitHub repository for more details.',
+      },
+      {
+        title: 'Is Mamahuhu free to use?',
+        description:
+          'Yes, all Mamahuhu projects are completely free and open-source. We believe in making technology accessible to everyone.',
+      },
+      {
+        title: 'Will Mamahuhu introduce paid plans in the future?',
+        description:
+          'Currently, we have no plans for commercialization, and all our projects will remain free. If we ever introduce paid plans in the future, they will only apply to advanced features or enterprise use cases. Personal use and core functionalities will always be free.',
+      },
+      {
+        title: "How can I stay updated on Mamahuhu's projects?",
+        description:
+          'You can follow us on GitHub, join our community forum, or subscribe to our newsletter for the latest updates, announcements, and project releases.',
+      },
+      {
+        title: 'How is Mamahuhu funded?',
+        description:
+          "Mamahuhu is currently supported by volunteer contributions and community donations. If you'd like to support us, consider donating or spreading the word about our projects!",
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    stats={[
+      { title: 'Downloads', amount: '32K' },
+      { title: 'Stars', amount: '22.8K' },
+      { title: 'Forks', amount: '1.2K' },
+      { title: 'Users', amount: '21.6K' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: 'https://github.com/mamahuhu-io',
+        target: '_blank',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title"> &lt; HAVE SOMETHING TO SAY? /&gt; </Fragment>
+
+    <Fragment slot="subtitle">
+      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
+      waste more time!
+    </Fragment>
+  </CallToAction>
+</Layout>
